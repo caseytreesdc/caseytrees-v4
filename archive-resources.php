@@ -15,7 +15,11 @@
                     echo wp_get_attachment_image( $image, $size );
                 }
             ?>
-            <?php echo get_the_category_list(); ?>
+            <?php $resource_id = get_the_ID();?>
+            <p>Categories: <?php  echo get_the_term_list($resource_id, 'resources-categories');?></p>
+            <p>Tags: <?php echo get_the_term_list($resource_id, 'resources-tags', '', ' ');?>
+            <?php the_excerpt(); ?>
+
             <?php
         }
     }
