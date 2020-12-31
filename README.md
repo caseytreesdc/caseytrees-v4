@@ -45,12 +45,12 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
    1. Nothing else is need on this file for now.
    1. Click Activate on our new theme in the [CMS Tab](https://caseytrees-v4.local/wp-admin/themes.php).
    1. Currently, `Pages > Home` is set to the front page. 
-   2. Create a new page "Home 2021"
+   2. Create a new page "Front Page"
    3. Notice that in the CMS Sidebar, we have Pages, Posts, Media, but no Resources or Trees. These are [Custom Post Types](https://wordpress.org/support/article/post-types/#custom-post-types) ... READ MORE ...
 
 ## A New Home Page
 ### Create `front-page.php` in the theme directory (`/themes/ct_theme21`)
-1. At `Settings > Reading` set `Your homepage displays` to the radio button for Static Page, and select the new page we created "Home 2021" and Save Changes
+1. At `Settings > Reading` set `Your homepage displays` to the radio button for Static Page, and select the new page we created "Front Page" and Save Changes
 2. The home page is now rendered by `front-page.php`.
 
 ### The Header
@@ -60,6 +60,7 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
 3. Create `functions.php` - add
 ```
 /*
+<?php
 ===================================
 Theme Supports
 ===================================
@@ -90,7 +91,7 @@ wp_nav_menu(
 ?>
 ```
 *** in the above code, the string given to 'theme_location without registration in functions.php seems to give us a menu of all our current pages and parent child relationships? 
-
+'theme_location` is the only required argument needed see [wp_nav_menu() Function](https://developer.wordpress.org/reference/functions/wp_nav_menu/)
 #### Check out the browser and what it renders on [Front-page.php](http://caseytrees-v4.local/).
 ## Creating a simple menu with relevant Pages/Content
 1. Create a new Page in the CMS called 'Blog Posts' or 'The Leaflet'
@@ -135,7 +136,7 @@ wp_nav_menu(
 */
 function ct2021_menus() {
     $locations = array(
-        'primary' => 'Header Menu',
+        'topOfAllPagesMenu' => 'top of all pages',
     );
 
     register_nav_menus($locations);

@@ -11,13 +11,13 @@ function ct2021_theme_setup() {
 add_action('after_setup_theme', 'ct2021_theme_setup');
 
 /*
-    ===================================
-    Menu
-    ===================================
+===================================
+Menu
+===================================
 */
 function ct2021_menus() {
     $locations = array(
-        'primary' => 'Header Menu',
+        'topOfAllPagesMenu' => 'Top of All Pages for Now',
     );
 
     register_nav_menus($locations);
