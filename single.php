@@ -1,5 +1,5 @@
-<?php get_header(); ?> 
-<?php the_posts_pagination(); ?>
+<?php get_header(); ?>
+
 <?php 
     if( have_posts() ) {
         while( have_posts() ) {
@@ -10,14 +10,14 @@
             <p><?php echo get_the_date(); ?> by <?php echo get_field('author');?> </p>       
             <?php 
                 $image = get_field('image');
-                $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                $size = 'full'; // (thumbnail, medium, large, full or custom size)
                 if( $image ) {
                     echo wp_get_attachment_image( $image, $size );
                 }
             ?>
             <?php echo get_the_category_list(); ?>
+            <?php the_content();?>
             <?php
         }
     }
 ?>
-<?php the_posts_pagination(); ?>

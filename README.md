@@ -117,7 +117,7 @@ wp_nav_menu(
             <p>
                 <?php $post_id = get_the_ID(); ?>
                 <?php echo get_post_type($post_id); ?>
-                <?php the_date(); ?>
+                <?php echo get_the_date(); ?>
             </p>
             
             <?php
@@ -144,3 +144,6 @@ function ct2021_menus() {
 
 add_action('init', 'ct2021_menus');
 ```
+
+## Adding our Trees and Resources
+
