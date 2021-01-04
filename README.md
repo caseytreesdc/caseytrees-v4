@@ -4,7 +4,7 @@
 1. Install [Local](https://localwp.com/pro/)
 2. Install [VSCode](https://code.visualstudio.com/) 
 3. Get the backup zip file of the site including the sql from [wpengine](https://my.wpengine.com/)
-   1. Or [HERE](https://www.dropbox.com/s/2d6q8iknkzlxxdc/site-archive-caseytrees-live-1609240284-f7NOUU2nr1bSCq6i4mLvRqjnYXleFHFkt305.zip?dl=0) because the WPEngine thing is weird. 
+   1. Or ask TK because wpEngine doesn't give us the newest update
    2. why is my backup not updated?
 4. 
    1. Drop that zip file onto the Local application
