@@ -2,13 +2,16 @@
 
 ## General Setup Mac for now
 1. Install [Local](https://localwp.com/pro/)
-2. Get the backup zip file of the site including the sql from [wpengine](https://my.wpengine.com/)
-   1. why is my backup not updated?
-3. Name/Rename the file to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
+2. Install [VSCode](https://code.visualstudio.com/) 
+3. Get the backup zip file of the site including the sql from [wpengine](https://my.wpengine.com/)
+   1. Or from Tissa because the WPEngine thing is weird. 
+   2. why is my backup not updated?
+4. 
    1. Drop that zip file onto the Local application
-4. Click on the site title to open it in the browser
-5. The repo is in /Users/username/Local Sites
-6. Login in with your Casey Trees CMS Password
+5. Name the site to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
+6. Click on the site title to open it in the browser
+7. The repo is in /Users/username/Local Sites
+8. Login in with your Casey Trees CMS Password
 
 ## A New Theme
 
@@ -395,4 +398,4 @@ function trees_init() {
 ```
 2. create <b>`page.php`</b> and copy and paste everything from `single.php` into it. 
 
-Now most if not all content in the Casey Trees SQL Database associate with caseytrees.org CMS is displaying through the theme. 
+Now most if not all content in the Casey Trees SQL Database of caseytrees.org is being rendered through the theme, into the browser. 
