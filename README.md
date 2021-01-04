@@ -386,11 +386,13 @@ function trees_init() {
 
 ```
 ### But what about the other Pages?!
-Make `front-page.php` look like this: 
+1. Make `front-page.php` look like this: 
 
 ```
 <?php get_header(); ?>
 <?php wp_nav_menu(); ?>
 <?php wp_page_menu(); ?>
 ```
+2. create <b>`page.php`</b> and copy and paste everything from `single.php` into it. 
+
 Now most if not all content in the Casey Trees SQL Database associate with caseytrees.org CMS is displaying through the theme. 
