@@ -3,17 +3,14 @@
 ## 1. General Setup Mac for now
 1. Download the ZIP Archive file from the link and don't unzip it!
 1. Install [Local](https://localwp.com/pro/)
-2. Install [VSCode](https://code.visualstudio.com/) or your favorite text editor. 
+1. Install [VSCode](https://code.visualstudio.com/) or your favorite text editor. 
    1. [Sublime Text](https://www.sublimetext.com/)
    2. [Atom](https://atom.io/)
-3. Get the backup zip file of the site including the sql from 
-   1. TK for now, OR
-   2. [wpengine](https://my.wpengine.com/)
-4. Drop that zip file onto the Local application
-5. Name the site to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
-6. Click on the site title to open it in the browser
-7. Login in with your Casey Trees CMS Password
-8. The repository AKA repo AKA where all the files are is in 
+1. Drop that zip file onto the Local application
+1. Name the site to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
+1. Click on the site title to open it in the browser
+1. Login in with your Casey Trees CMS Password
+1. The repository AKA repo AKA where all the files are is in 
    1. Mac: `/Users/yourusername/Local Sites`
    2. Windows: `C:/Users/yourusername/Local Sites`
    
