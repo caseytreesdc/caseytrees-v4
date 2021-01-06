@@ -15,3 +15,111 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
 (C) 2021 Casey Trees
 
 */
+
+:root {
+    /* colors */
+    --black: #000000;
+    --coffee: #2c1010;
+    --grey: #373737;
+    --silver: #e5e6e5;
+    --paper: #ffffff;
+    --cobalt: #3768b2;
+    --forest: #395940;
+    --moss: #7b9e81;
+    --khaki: #f2e397;
+    --yellow: #f0d13f;
+    --orange: #e18323;
+    --paarl: #a4532e;
+
+    /* fonts */
+    --cronos: cronos-pro, lato, zeitung-mono, sans-serif;
+    --lato: lato, cronos-pro, zeitung-mono, sans-serif;
+    --zeitung: zeitung-mono, cronos-pro, lato, sans-serif;
+}
+
+.header__container {
+    /* the 1% margin prevents the  header nav skew from exceeding the window width */
+    margin: 1% 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--paper);
+}
+
+.header__logo-anchor {
+    border-radius: 2px;
+}
+
+.header__logo-anchor:hover,
+.header__logo-anchor:focus {
+    background: var(--moss);
+}
+
+.header__logo {
+    width: 250px;
+    height: auto;
+}
+
+.Nav__container {
+    transform: skew(-20deg);
+}
+
+.Nav__ul {
+    list-style-type: none;
+    padding: 10px;
+    font-family: var(--zeitung);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 30px;
+}
+
+header li {
+    display: flex;
+}
+
+header li a {
+    color: var(--coffee);
+    padding: 3px 2vw;
+    text-transform: uppercase;
+}
+
+header li a:hover,
+header li a:focus {
+    background: var(--cobalt);
+    color: var(--paper);
+}
+
+header li p {
+    margin: 3px 0;
+}
+
+.Nav__slash {
+    width: 2px;
+    height: 100%;
+    background: var(--coffee);
+    margin: 0 .5vw;
+}
+
+.Nav__ul>li:last-child .Nav__slash {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .header__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-logo {
+        width: 340px;
+        margin: 10px;
+    }
+}
+
+/* //  landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .Nav__slash {
+        display: none;
+    }
+}

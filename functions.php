@@ -141,3 +141,38 @@ function trees_init() {
 
 	register_post_type( 'trees', $args );
 }
+
+// /*
+//     ===================================
+//     Class Manipulation Filters
+//     ===================================
+// */
+add_filter('get_custom_logo', 'ct2021_replace_logo_classes');
+
+function ct2021_replace_logo_classes( $html ) {
+	$html = str_replace( 'custom-logo-link', 'header__logo-anchor', $html);
+	$html = str_replace( 'custom-logo', 'header__logo', $html);
+	return $html;
+}
+
+add_filter('wp_nav_menu', 'ct2021_replace_header_menu_div_wrapper_class');
+
+function ct2021_replace_header_menu_div_wrapper_class( $html ) {
+	$html = str_replace('menu-main-navigation-container', 'Nav__container', $html);
+	return $html;
+}
+
+// /*
+//     ===================================
+//     Register Styles
+//     ===================================
+// */
+function ct2021_register_styles() {
+    
+    $styleVersion = wp_get_theme()->get( 'Version' );
+	
+	wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/bix5hve.css', array(), 'version');
+    wp_enqueue_style('ct2021-style', get_template_directory_uri() . '/style.css', array(), $styleVersion, 'all');
+}
+
+add_action('wp_enqueue_scripts', 'ct2021_register_styles');

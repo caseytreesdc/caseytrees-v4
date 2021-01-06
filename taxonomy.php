@@ -21,3 +21,4 @@
     }
 ?>
 <?php the_posts_pagination(); ?>
+<?php get_footer(); ?>
