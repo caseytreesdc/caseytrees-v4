@@ -21,7 +21,7 @@
    2. Windows Explorer: `C:/Users/yourcomputerusername/Local Sites`
    
 ## Tl;dr
-1. [Download]() the theme code files from the top of this page.
+1. [Download](https://github.com/caseytreesdc/caseytrees-v4/archive/master.zip) the theme code files from the top of this page.
 2. Unzip and put that folder in `/Local Sites/caseytrees_2021/app/public/wp-content/themes/` 
 3. Go to `Appearance > Themes` and select the new theme (the one with no screenshot)
 4. In `Appearance > Menus` Create a new menu, name it, and click Create Menu. 
