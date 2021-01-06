@@ -10,7 +10,7 @@
 3. Install [VSCode](https://code.visualstudio.com/) or your favorite text editor. 
    1. [Sublime Text](https://www.sublimetext.com/)
    2. [Atom](https://atom.io/)
-4. Drop that zip file onto the Local application
+4. Drop that zip site archive file onto the Local application
    1. Select defaults and click next, the import will take 5-8 minutes.
    2. On windows it might have an error but just hit OK and it should keep going. 
 5. Name the site to something friendly like 'caseytrees_2021', it will be the url and the site title in Local
