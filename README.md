@@ -16,6 +16,17 @@
 8. The repository AKA repo AKA where all the files are is in 
    1. Mac: `/Users/yourusername/Local Sites`
    2. Windows: `C:/Users/yourusername/Local Sites`
+   
+## Tl;dr
+1. [Download]() the master/develop branch Repository
+2. Put it in the directory `/Local Sites/caseytrees-v4/app/public/wp-content/themes/`
+3. Go to `Appearance > Themes` and select the new theme (the one with no screenshot)
+4. In `Appearance > Menus` Create a new menu, name it, and click Create Menu. 
+5. On the left side add the Home Page, All Trees, All Resources. 
+6. Create a new Page in the CMS called 'Blog Posts' or 'The Leaflet'
+7. Under `Settings > Reading` set `Posts Page:` to that page and Save Changes.
+8. Back in `Appearance > Menus`, add that page to the menu. 
+9. In `Appearance > Themes > Customize > Site Identity` add a logo. 
 
 ## 2. A New Theme
 
