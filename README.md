@@ -9,16 +9,17 @@
    1. [Sublime Text](https://www.sublimetext.com/)
    2. [Atom](https://atom.io/)
 4. Drop that zip file onto the Local application
-5. Name the site to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
+   1. Select defaults and click next, the import will take 5-8 minutes.
+5. Name the site to something friendly like 'caseytrees_2021', it will be the url and the site title in Local
 6. Click on the site title to open it in the browser
-7. Login in with your Casey Trees CMS Password
-8. The repository AKA repo AKA where all the files are is in 
-   1. Mac: `/Users/yourusername/Local Sites`
-   2. Windows: `C:/Users/yourusername/Local Sites`
+7. Login in with your Casey Trees Wordpress account. 
+8. Go to the new site repository in 
+   1. Mac Finder: `/Users/yourcomputerusername/Local Sites`
+   2. Windows Explorer: `C:/Users/yourcomputerusername/Local Sites`
    
 ## Tl;dr
 1. [Download]() the master/develop branch Repository
-2. Put it in the directory `/Local Sites/caseytrees-v4/app/public/wp-content/themes/`
+2. Put it in the directory `/Local Sites/caseytrees_2021/app/public/wp-content/themes/`
 3. Go to `Appearance > Themes` and select the new theme (the one with no screenshot)
 4. In `Appearance > Menus` Create a new menu, name it, and click Create Menu. 
 5. On the left side add the Home Page, All Trees, All Resources. 
@@ -29,12 +30,12 @@
 
 ## 2. A New Theme
 
-### 2.1 Navigate to [`Appearance > Themes`](https://caseytrees-v4.local/wp-admin/themes.php) in the CMS
-1. Currently the theme is called [Casey Trees, by NMC](https://caseytrees-v4.local/wp-admin/themes.php?theme=nmc_caseytrees)
+### 2.1 Navigate to [`Appearance > Themes`](https://caseytrees_2021.local/wp-admin/themes.php) in the CMS
+1. Currently the theme is called [Casey Trees, by NMC](https://caseytrees_2021.local/wp-admin/themes.php?theme=nmc_caseytrees)
    1. The home page is rendered (kinda) through `wp-content/themes/nmc_caseytrees/templates/_layouts/base.twig`... READ MORE ... 
-1. create a folder called something like 'ct_theme21' in `/Local Sites/caseytrees-v4/app/public/wp-content/themes`
-1. create 'style.css' in `/Local Sites/caseytrees-v4/app/public/wp-content/themes/ct_theme21`. This the template directory. 
-1. Setting up the <b>Template Header</b>
+1. create a folder called something like 'ct_theme21' in `/Local Sites/caseytrees-_2021/app/public/wp-content/themes`
+2. create 'style.css' in `/Local Sites/caseytrees_2021/app/public/wp-content/themes/ct_theme21`. This the template directory. 
+3. Setting up the <b>Template Header</b>
    1. style.css requires a header, like: (there are more or less options of what can go in there.)
 ```
 /*
@@ -60,7 +61,7 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
 1. Create <b>`index.php`</b> in `wp-content/themes/ct_theme21`
    1. This will load if no other php file is available.
    2. Nothing else is needed on this file for now.
-   3. Click Activate on our new theme in the [CMS Tab](https://caseytrees-v4.local/wp-admin/themes.php).
+   3. Click Activate on our new theme in the [CMS Tab](https://caseytrees_2021.local/wp-admin/themes.php).
    4. Currently, `Pages > Home` is set to the front page. 
    5. Create a new page "Front Page"
    6. Notice that in the CMS Sidebar, we have Pages, Posts, Media, but no Resources or Trees. These are [Custom Post Types](https://wordpress.org/support/article/post-types/#custom-post-types) ... READ MORE ...
@@ -71,7 +72,7 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
 
 ### 2.4 The Header
 1. In `front-page.php` put `<?php get_header(); ?>` to call on `header.php`. 
-2. At [`Appearance > Themes`](https://caseytrees-v4.local/wp-admin/themes.php), select Customize and upload a new favicon if desired. 
+2. At [`Appearance > Themes`](https://caseytrees_2021.local/wp-admin/themes.php), select Customize and upload a new favicon if desired. 
    1. There is no option to upload a logo for the site, but we will add it now. 
 3. Create `functions.php` - add
 ```
@@ -156,7 +157,7 @@ function ct2021_menus() {
 
 add_action('init', 'ct2021_menus');
 ```
-#### Check out the browser and what it renders on [Front-page.php](http://caseytrees-v4.local/).
+#### Check out the browser and what it renders on [Front-page.php](http://caseytrees-_2021.local/).
 
 ### 2.7 Single Blog Post Page
 1. Create <b>`single.php`</b> with 
@@ -308,7 +309,7 @@ register_taxonomy(
 ```
 9.  Click on the link, if there is a 404, go to `Settings > Permalinks`, change the Common Settings to `Plain`. 
 10. Save Changes
-11. Change it back to whatever we want, as of now its `Month and Name` or `http://caseytreesv4.local/2020/12/sample-post/`.
+11. Change it back to whatever we want, as of now its `Month and Name` or `http://caseytrees_2021.local/2020/12/sample-post/`.
 12. Save Changes
 13. Refresh the 404 page or visit the All Resources Archive from the home page. 
 
@@ -577,7 +578,7 @@ function ct2021_replace_logo_classes( $html ) {
             id="menu-item-20082"
             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-20080 current_page_item menu-item-20082"
           >
-            <a href="http://caseytreesv4.local/" aria-current="page"
+            <a href="http:/caseytrees_2021.local/" aria-current="page"
               >Front Page</a
             >
           </li>
@@ -585,13 +586,13 @@ function ct2021_replace_logo_classes( $html ) {
             id="menu-item-20083"
             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20083"
           >
-            <a href="http://caseytreesv4.local/the-leaflet/">The Leaflet</a>
+            <a href="http:/caseytrees_2021.local/the-leaflet/">The Leaflet</a>
           </li>
           <li
             id="menu-item-20084"
             class="menu-item menu-item-type-post_type_archive menu-item-object-resources menu-item-20084"
           >
-            <a href="http://caseytreesv4.local/resources-list/"
+            <a href="http:/caseytrees_2021.local/resources-list/"
               >All Resources</a
             >
           </li>
@@ -599,7 +600,7 @@ function ct2021_replace_logo_classes( $html ) {
             id="menu-item-20086"
             class="menu-item menu-item-type-post_type_archive menu-item-object-trees menu-item-20086"
           >
-            <a href="http://caseytreesv4.local/trees-list/">All Trees</a>
+            <a href="http:/caseytrees_2021.local/trees-list/">All Trees</a>
           </li>
         </ul>
       </div>
@@ -640,7 +641,7 @@ wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/bix5hve.css', array(), 
           >
             <div class="Nav__anchor-p-container">
               <p>
-                <a href="http://caseytreesv4.local/" aria-current="page"
+                <a href="http:/caseytrees_2021.local/" aria-current="page"
                   >Front Page</a
                 >
               </p>
@@ -653,7 +654,7 @@ wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/bix5hve.css', array(), 
           >
             <div class="Nav__anchor-p-container">
               <p>
-                <a href="http://caseytreesv4.local/the-leaflet/">The Leaflet</a>
+                <a href="http:/caseytrees_2021.local/the-leaflet/">The Leaflet</a>
               </p>
             </div>
             <div class="Nav__slash"></div>
@@ -664,7 +665,7 @@ wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/bix5hve.css', array(), 
           >
             <div class="Nav__anchor-p-container">
               <p>
-                <a href="http://caseytreesv4.local/resources-list/"
+                <a href="http:/caseytrees_2021.local/resources-list/"
                   >All Resources</a
                 >
               </p>
@@ -677,7 +678,7 @@ wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/bix5hve.css', array(), 
           >
             <div class="Nav__anchor-p-container">
               <p>
-                <a href="http://caseytreesv4.local/trees-list/">All Trees</a>
+                <a href="http:/caseytrees_2021.local/trees-list/">All Trees</a>
               </p>
             </div>
             <div class="Nav__slash"></div>
