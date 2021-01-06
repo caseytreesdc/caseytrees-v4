@@ -4,29 +4,32 @@
 1. Download the ZIP Archive file don't unzip it, located in 
    1. C&D OneDrive 2020 Site Archive Zips 
    2. P Drive > Communications > 500. Website > 2020
-2. Install [Local](https://localwp.com/pro/)
+   - Windows - `caseytrees-windows_0104.zip`
+   - Mac - `site-archive-caseytrees-live-1609240284-f7NOUU2nr1bSCq6i4mLvRqjnYXleFHFkt305.zip`
+2. Install [Local](https://localwp.com/)
 3. Install [VSCode](https://code.visualstudio.com/) or your favorite text editor. 
    1. [Sublime Text](https://www.sublimetext.com/)
    2. [Atom](https://atom.io/)
 4. Drop that zip file onto the Local application
    1. Select defaults and click next, the import will take 5-8 minutes.
+   2. On windows it might have an error but just hit OK and it should keep going. 
 5. Name the site to something friendly like 'caseytrees_2021', it will be the url and the site title in Local
-6. Click on the site title to open it in the browser
-7. Login in with your Casey Trees Wordpress account. 
-8. Go to the new site repository in 
+    ***Some of the links in this readme link to the local site itself, so naming it as above will allow them to work. 
+6. In the Local app, click the Open Site and Admin buttons to open the site and CMS in the browser. 
+7.  Go to the new site repository in 
    1. Mac Finder: `/Users/yourcomputerusername/Local Sites`
    2. Windows Explorer: `C:/Users/yourcomputerusername/Local Sites`
    
 ## Tl;dr
-1. [Download]() the master/develop branch Repository
-2. Put it in the directory `/Local Sites/caseytrees_2021/app/public/wp-content/themes/`
+1. [Download]() the theme code files from the top of this page.
+2. Unzip and put that folder in `/Local Sites/caseytrees_2021/app/public/wp-content/themes/` 
 3. Go to `Appearance > Themes` and select the new theme (the one with no screenshot)
 4. In `Appearance > Menus` Create a new menu, name it, and click Create Menu. 
 5. On the left side add the Home Page, All Trees, All Resources. 
 6. Create a new Page in the CMS called 'Blog Posts' or 'The Leaflet'
 7. Under `Settings > Reading` set `Posts Page:` to that page and Save Changes.
 8. Back in `Appearance > Menus`, add that page to the menu. 
-9. In `Appearance > Themes > Customize > Site Identity` add a logo. 
+9.  In `Appearance > Themes > Customize > Site Identity` add a logo. 
 
 ## 2. A New Theme
 
