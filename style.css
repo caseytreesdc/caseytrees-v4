@@ -37,6 +37,10 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
     --zeitung: zeitung-mono, cronos-pro, lato, sans-serif;
 }
 
+html, body {
+    margin: 0;
+}
+
 .header__container {
     /* the 1% margin prevents the  header nav skew from exceeding the window width */
     margin: 1% 1%;
@@ -105,6 +109,138 @@ header li p {
     display: none;
 }
 
+main h2 {
+    margin: 0;
+}
+
+main section p {
+    margin: 0;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.main__page-1-section-1 {
+    background-position-x: center;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    text-align: right;
+}
+
+.main__page-1-section-1-h2,
+.main__page-2-section-1-h2,
+.main__page-3-section-1-h2,
+.main__page-4-section-1-h2 {
+    font-size: 56px;
+    padding: 5% 20% 0 0;
+    font-family: var(--cronos);
+    color: var(--coffee);
+}
+
+.main__page-1-section-2 {
+    height: 20vh;
+    background: var(--moss);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* 
+.get-updates__iframe {
+    opacity: 0;
+} */
+
+.motto {
+    padding: 100px 0 0 100px;
+    font-family: var(--zeitung);
+    font-size: 18px;
+    color: var(--coffee);
+    letter-spacing: 3px;
+}
+
+.main__page-1-section-3 {
+    background: var(--moss);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.main__page-1-section-3-p {
+    font-family: var(--zeitung);
+    color: var(--paper);
+    letter-spacing: 3px;
+}
+
+.down-arrow {
+    transform-origin: center;
+    transform: rotate(45deg);
+    height: 30px;
+    width: 30px;
+    border-bottom: solid var(--paper) 3px;
+    border-right: solid var(--paper) 3px;
+}
+
+.grey-highlight {
+    background: var(--silver);
+}
+
+.main__page-2 {
+    background: var(--yellow);
+}
+
+.main__page-3 {
+    background: var(--orange);
+}
+
+.main__page-4 {
+    background: var(--paarl);
+}
+
+.main__page-2-section-1-h2,
+.main__page-3-section-1-h2,
+.main__page-4-section-1-h2 {
+    padding: 50px 50px 25px 50px;
+}
+
+.main__page-2-section-2,
+.main__page-3-section-2,
+.main__page-4-section-2 {
+    height: 25vh;
+    padding: 25px 50px 50px 50px;
+    text-align: right;
+    font-family: var(--zeitung);
+    color: var(--coffee);
+    letter-spacing: 3px;
+    line-height: 2em;
+}
+
+.main__page-2-section-3,
+.main__page-3-section-3,
+.main__page-4-section-3 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+}
+
+.main__page-2-section-3-img,
+.main__page-3-section-3-img,
+.main__page-4-section-3-img {
+    width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    align-self: center;
+}
+
 @media (max-width: 576px) {
     .header__container {
         display: flex;
@@ -115,6 +251,26 @@ header li p {
         width: 340px;
         margin: 10px;
     }
+
+
+    .main__page-1 {
+        height: 200%;
+    }
+
+    .main__page-1-section-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .motto {
+        padding: 0;
+    }
+
+    .get-updates__iframe {
+        width: 100%;
+        height: 500px;
+    }
+
 }
 
 /* //  landscape phones, less than 768px) */

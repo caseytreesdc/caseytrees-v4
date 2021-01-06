@@ -15,7 +15,7 @@
    2. On windows it might have an error but just hit OK and it should keep going. 
 5. Name the site to something friendly like 'caseytrees_2021', it will be the url and the site title in Local
     ***Some of the links in this readme link to the local site itself, so naming it as above will allow them to work. 
-6. In the Local app, click the Open Site and Admin buttons to open the site and CMS in the browser. 
+6. In the Local app, click Start Site (top right), click the Open Site and Admin buttons to open the site and CMS in the browser. 
 7.  Go to the new site repository in 
    1. Mac Finder: `/Users/yourcomputerusername/Local Sites`
    2. Windows Explorer: `C:/Users/yourcomputerusername/Local Sites`
@@ -417,8 +417,8 @@ function trees_init() {
 
 Now most if not all content in the Casey Trees SQL Database of caseytrees.org is being rendered through the theme, into the browser. 
 
-## 4. Building the Home Page - [reference](https://www.dropbox.com/sh/h4dn995tvbfdsdz/AAA4_nXgVlZBnOibmS5l5iyXa?dl=0)
-### 4.1 HTML Boilerplate and Stylesheet Enqueue
+## 3.0 Styling First Steps 
+### 3.1 HTML Boilerplate and Stylesheet Enqueue
 1. First we will enqueue the stylesheet, although it won't initialize yet, until we add HTML Boilerplate, and the function `wp_head()`
 2. In `functions.php` add -
 ```
@@ -478,8 +478,8 @@ Here's the rest of the Boilerplate
    7. `single.php`
    8. `taxonomy.php`
 6. Right click on a page, and select "View Page Source" to confirm things are being rendered in the browser. 
-### 2.2 Styling the Header
-#### 2.2.1 The Logo
+### 3.2 Styling the Header
+#### 3.2.1 The Logo
 1. Add the following to `:root` in `style.css`
 ```
 /*
@@ -572,7 +572,7 @@ function ct2021_replace_logo_classes( $html ) {
 	return $html;
 }
 ```
-#### 2.2.2 The Nav Menu
+#### 3.2.2 The Nav Menu
 1. Currently, in `header.php` the call to `wp_nav_menu()` around <u>line 15</u>, with its array argument returns:
 ```
       <div class="menu-main-navigation-container">
@@ -748,3 +748,273 @@ header li p {
 ## Checkpoint 1
 Congratulations! We've dug deep into Worpdress, and are making amazing progress!
 The code up to this point is available on this Github Branch [checkpoint-1](https://github.com/caseytreesdc/caseytrees-v4/tree/checkpoint-1)! Use it to check/compare/copy/etc.
+
+## 4.0 Building the Home Page - [reference](https://www.dropbox.com/sh/h4dn995tvbfdsdz/AAA4_nXgVlZBnOibmS5l5iyXa?dl=0)
+1. In the sidebar, go to `Custom Fields > Add New`.
+2. Call it something like 'Home Page Photos'
+3. Click `+ Add Field` make Field Label to 'Home Page MAIN Photo', it will make the Field Name `home_page_main_photo`.
+4. Set the Field Type to Image, and the Return Format to 'Image URL'
+5. Make 3 more, so that we end up having 4 Fields in this Field Group. The Field Labels and corresponding Field Name should be:
+   1. Home Page MAIN Photo, `home_page_main_photo`
+   2. Home Page RESTORE Photo, `home_page_restore_photo`
+   3. Home Page ENHANCE Photo, `home_page_enhance_photo`
+   4. Home Page PROTECT Photo, `home_page_protect_photo`
+6. Under `Location > Rules` set <b>Show this field group</b> to  `Page Type` `is equal to` `Front Page`.
+7. Go to the Page that is set to be the Front Page in Pages and add/upload the photos from the media library. 
+8. Add the following to `style.css`
+```
+
+main h2 {
+    margin: 0;
+}
+
+main section p {
+    margin: 0;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.main__page-1-section-1 {
+    background-position-x: center;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    height: 60vh;
+    text-align: right;
+}
+
+.main__page-1-section-1-h2,
+.main__page-2-section-1-h2,
+.main__page-3-section-1-h2,
+.main__page-4-section-1-h2 {
+    font-size: 56px;
+    padding: 5% 20% 0 0;
+    font-family: var(--cronos);
+    color: var(--coffee);
+}
+
+.main__page-1-section-2 {
+    height: 20vh;
+    background: var(--moss);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* 
+.get-updates__iframe {
+    opacity: 0;
+} */
+
+.motto {
+    padding: 100px 0 0 100px;
+    font-family: var(--zeitung);
+    font-size: 18px;
+    color: var(--coffee);
+    letter-spacing: 3px;
+}
+
+.main__page-1-section-3 {
+    background: var(--moss);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.main__page-1-section-3-p {
+    font-family: var(--zeitung);
+    color: var(--paper);
+    letter-spacing: 3px;
+}
+
+.down-arrow {
+    transform-origin: center;
+    transform: rotate(45deg);
+    height: 30px;
+    width: 30px;
+    border-bottom: solid var(--paper) 3px;
+    border-right: solid var(--paper) 3px;
+}
+
+.grey-highlight {
+    background: var(--silver);
+}
+
+.main__page-2 {
+    background: var(--yellow);
+}
+
+.main__page-3 {
+    background: var(--orange);
+}
+
+.main__page-4 {
+    background: var(--paarl);
+}
+
+.main__page-2-section-1-h2,
+.main__page-3-section-1-h2,
+.main__page-4-section-1-h2 {
+    padding: 50px 50px 25px 50px;
+}
+
+.main__page-2-section-2,
+.main__page-3-section-2,
+.main__page-4-section-2 {
+    height: 25vh;
+    padding: 25px 50px 50px 50px;
+    text-align: right;
+    font-family: var(--zeitung);
+    color: var(--coffee);
+    letter-spacing: 3px;
+    line-height: 2em;
+}
+
+.main__page-2-section-3,
+.main__page-3-section-3,
+.main__page-4-section-3 {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+}
+
+.main__page-2-section-3-img,
+.main__page-3-section-3-img,
+.main__page-4-section-3-img {
+    width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    align-self: center;
+}
+```
+9. Make this front-page.php
+```
+<?php get_header(); ?>
+    <!-- begin main MODULE -->
+    <main>
+    <!-- being main page-1 MODULE -->
+    <div class="main__page-1">
+        <!-- begin main masthead section MODULE-->
+        <section
+        class="main__page-1-section-1"
+        style="
+            background: linear-gradient(
+                rgba(123, 158, 129, 0.3),
+                rgba(123, 158, 129, 0.3)
+            ),
+            url(<? echo get_field('home_page_main_photo');?>);
+        "
+        >
+        <h2 class="main__page-1-section-1-h2">
+            Empowering communities <br />
+            in DC through trees
+        </h2>
+        </section>
+        <!-- end main masthead section MODULE-->
+        <!-- begin main motto section MODULE-->
+        <section class="main__page-1-section-2">
+        <div class="motto">
+            <p>Our mission is to</p>
+            <p class="bold-text">RESTORE ENHANCE + PROTECT</p>
+            <p>the tree canopy of Washington, DC.</p>
+        </div>
+        <!-- begin get udpdates iframe MODULE-->
+        <iframe
+            class="get-updates__iframe"
+            src="https://tfaforms.com/4865291"
+            height="350"
+            width="600"
+            frameborder="0"
+            scrolling="no"
+        ></iframe>
+        <script src="//tfaforms.com/js/iframe_resize_helper.js"></script>
+        <!-- end get udpdates iframe MODULE -->
+        </section>
+        <!-- end motto section MODULE -->
+        <!-- begin how do we do it section MODULE-->
+        <section class="main__page-1-section-3">
+        <p class="main__page-1-section-3-p">HOW DO WE DO IT?</p>
+        <div class="down-arrow"></div>
+        </section>
+        <!-- end how do we do it section MODULE-->
+    </div>
+    <!-- end main page-1 MODULE-->
+    <!-- begin main page-2 MODULE-->
+    <div class="main__page-2">
+        <section class="main__page-2-section-1">
+        <h2 class="main__page-2-section-1-h2">RESTORE</h2>
+        </section>
+        <section class="main__page-2-section-2">
+        <p class="main__page-2-section-2-p">
+            WITH OUR DISTRICT PARTNERS AND THOUSANDS OF LOCAL VOLUNTEERS,
+        </p>
+        <p class="main__page-2-section-2-p">
+            WE <span class="grey-highlight">PLANT 3,000+ TREES</span> EVERY YEAR TO
+            REACH OUR
+        </p>
+        <p class="main__page-2-section-2-p">
+            COLLECTIVE GOAL OF 40% TREE CANOPY BY 2032.
+        </p>
+        </section>
+        <section class="main__page-2-section-3">
+        <img class="main__page-2-section-3-img" src="<? echo get_field('home_page_restore_photo');?>" />
+        </section>
+    </div>
+    <!-- end main page-2 MODULE-->
+    <!-- begin main page-3 MODULE-->
+    <div class="main__page-3">
+        <section class="main__page-3-section-1">
+        <h2 class="main__page-3-section-1-h2">ENHANCE</h2>
+        </section>
+        <section class="main__page-3-section-2">
+        <p class="main__page-3-section-2-p">
+            OUR PROGRAMS + CLASSES EQUIP DC RESIDENTS WITH
+        </p>
+        <p class="main__page-3-section-2-p">
+            THE
+            <span class="grey-highlight">TECHNICAL SKILLS + KNOWLEDGE</span> TO
+            FOSTER
+        </p>
+        <p class="main__page-3-section-2-p">
+            A HEALTHY, MATURE TREE CANOPY IN DC.
+        </p>
+        </section>
+        <section class="main__page-3-section-3">
+        <img class="main__page-3-section-3-img" src="<? echo get_field('home_page_enhance_photo');?>" />
+        </section>
+    </div>
+    <!-- end main page-3 MODULE-->
+    <!-- begin main page-4 MODULE-->
+    <div class="main__page-4">
+        <section class="main__page-4-section-1">
+        <h2 class="main__page-4-section-1-h2">PROTECT</h2>
+        </section>
+        <section class="main__page-4-section-2">
+        <p class="main__page-4-section-2-p">
+            THIS IS WHERE WE WILL DISCUSS
+            <span class="grey-highlight">ADVOCACY ACTIONS</span> AND
+        </p>
+        <p class="main__page-4-section-2-p">
+            <span class="grey-highlight">CONSERVATION INITIATIVES</span> THAT HELP
+            US
+        </p>
+        <p class="main__page-4-section-2-p">PROTECT US.</p>
+        </section>
+        <section class="main__page-4-section-3">
+        <img class="main__page-4-section-3-img" src="<? echo get_field('home_page_protect_photo');?>" />
+        </section>
+    </div>
+    </main>
+    <!-- end main page-4 MODULE-->
+
+<?php get_footer(); ?>
+```
