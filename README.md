@@ -1,49 +1,29 @@
-# Local Development for caseytrees.org
+# Local Development for [caseytrees.org](https://caseytrees.org/)
 
 ## 1. General Setup Mac for now
+1. Download the ZIP Archive file from the link and don't unzip it!
 1. Install [Local](https://localwp.com/pro/)
-2. Install [VSCode](https://code.visualstudio.com/)/[Atom](https://atom.io/)/[Sublime Text](https://www.sublimetext.com/) 
-   1. or your favorite text editor.
-3. Get the backup zip file of the site including the sql from [wpengine](https://my.wpengine.com/)
-   1. Or ask TK because wpEngine doesn't give us the newest update
-   2. why is my backup not updated?
+2. Install [VSCode](https://code.visualstudio.com/) or your favorite text editor. 
+   1. [Sublime Text](https://www.sublimetext.com/)
+   2. [Atom](https://atom.io/)
+3. Get the backup zip file of the site including the sql from 
+   1. TK for now, OR
+   2. [wpengine](https://my.wpengine.com/)
 4. Drop that zip file onto the Local application
-1. Name the site to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
-2. Click on the site title to open it in the browser
-3. The repo is in /Users/username/Local Sites
-4. Login in with your Casey Trees CMS Password
-## 2. Windows Setup
-1. This will fail at the moment on above step 4 because of quotations in the following picture names. 
-```
-tissakhosla@Tissas-MacBook-Pro caseytreesv4 % find app/public/wp-content/uploads -name '*"*'
-app/public/wp-content/uploads/2017/02/Christy-Kwan-Citizen-Forester-and-"Tree-Nut"-thumbnail-163x300.jpg
-app/public/wp-content/uploads/2017/02/Photo-of-the-Week-Our-very-own-Espaliered-"Gala"-Apples!-thumbnail-300x199.jpg
-app/public/wp-content/uploads/2017/02/Sara-"Getting-Ready-for-Tour-des-Trees-with-Some-On-the-Job-Training"-thumbnail-300x145.jpg
-app/public/wp-content/uploads/2017/02/Melanie-Choukas-Bradley-talks-Presidents-wood-thrushes-and-"City-of-Trees"--thumbnail-300x199.jpg
-app/public/wp-content/uploads/2017/02/Christy-Kwan-Citizen-Forester-and-"Tree-Nut"-thumbnail.jpg
-app/public/wp-content/uploads/2017/02/Christy-Kwan-Citizen-Forester-and-"Tree-Nut"-thumbnail-150x150.jpg
-app/public/wp-content/uploads/2017/02/Recap-Casey-Trees-Hits-Capitol-Hill-with-Summer-Watering-"Blitz"-thumbnail-300x285.jpg
-app/public/wp-content/uploads/2017/02/Recap-Casey-Trees-Hits-Capitol-Hill-with-Summer-Watering-"Blitz"-thumbnail-150x150.jpg
-app/public/wp-content/uploads/2017/02/Washington-City-Paper's-"Best-of-DC-2013"-thumbnail.jpg
-app/public/wp-content/uploads/2017/02/Sara-"Getting-Ready-for-Tour-des-Trees-with-Some-On-the-Job-Training"-thumbnail-150x150.jpg
-app/public/wp-content/uploads/2017/02/Sara-"Getting-Ready-for-Tour-des-Trees-with-Some-On-the-Job-Training"-thumbnail.jpg
-app/public/wp-content/uploads/2017/02/Melanie-Choukas-Bradley-talks-Presidents-wood-thrushes-and-"City-of-Trees"--thumbnail-150x150.jpg
-app/public/wp-content/uploads/2017/02/Photo-of-the-Week-Our-very-own-Espaliered-"Gala"-Apples!-thumbnail-150x150.jpg
-app/public/wp-content/uploads/2017/02/Washington-City-Paper's-"Best-of-DC-2013"-thumbnail-100x100.jpg
-app/public/wp-content/uploads/2017/02/Washington-City-Paper's-"Best-of-DC-2013"-thumbnail-300x169.jpg
-app/public/wp-content/uploads/2017/02/Photo-of-the-Week-Our-very-own-Espaliered-"Gala"-Apples!-thumbnail.jpg
-app/public/wp-content/uploads/2017/02/Washington-City-Paper's-"Best-of-DC-2013"-thumbnail-150x150.jpg
-app/public/wp-content/uploads/2017/02/Washington-City-Paper's-"Best-of-DC-2013"-thumbnail-300x253.jpg
-app/public/wp-content/uploads/2017/02/Melanie-Choukas-Bradley-talks-Presidents-wood-thrushes-and-"City-of-Trees"--thumbnail.jpg
-app/public/wp-content/uploads/2017/02/Recap-Casey-Trees-Hits-Capitol-Hill-with-Summer-Watering-"Blitz"-thumbnail.jpg
-```
-## 3. A New Theme
+5. Name the site to something friendly like 'caseytrees-v4', it will be the url and the site title in Local
+6. Click on the site title to open it in the browser
+7. Login in with your Casey Trees CMS Password
+8. The repository AKA repo AKA where all the files are is in 
+   1. Mac: `/Users/yourusername/Local Sites`
+   2. Windows: `C:/Users/yourusername/Local Sites`
 
-### 3.1 Navigate to [`Appearance > Themes`](https://caseytrees-v4.local/wp-admin/themes.php) in the CMS
+## 2. A New Theme
+
+### 2.1 Navigate to [`Appearance > Themes`](https://caseytrees-v4.local/wp-admin/themes.php) in the CMS
 1. Currently the theme is called [Casey Trees, by NMC](https://caseytrees-v4.local/wp-admin/themes.php?theme=nmc_caseytrees)
    1. The home page is rendered (kinda) through `wp-content/themes/nmc_caseytrees/templates/_layouts/base.twig`... READ MORE ... 
 1. create a folder called something like 'ct_theme21' in `/Local Sites/caseytrees-v4/app/public/wp-content/themes`
-1. create 'style.css' in `/Local Sites/caseytrees-v4/app/public/wp-content/themes/ct_theme21`
+1. create 'style.css' in `/Local Sites/caseytrees-v4/app/public/wp-content/themes/ct_theme21`. This the template directory. 
 1. Setting up the <b>Template Header</b>
    1. style.css requires a header, like: (there are more or less options of what can go in there.)
 ```
@@ -66,20 +46,20 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
 */
 ``` 
 
-### 3.2 Open [Visualize the Wordpress Template Hierarchy](https://wphierarchy.com/)
+### 2.2 Open [Visualize the Wordpress Template Hierarchy](https://wphierarchy.com/)
 1. Create <b>`index.php`</b> in `wp-content/themes/ct_theme21`
    1. This will load if no other php file is available.
-   1. Nothing else is needed on this file for now.
-   1. Click Activate on our new theme in the [CMS Tab](https://caseytrees-v4.local/wp-admin/themes.php).
-   1. Currently, `Pages > Home` is set to the front page. 
-   2. Create a new page "Front Page"
-   3. Notice that in the CMS Sidebar, we have Pages, Posts, Media, but no Resources or Trees. These are [Custom Post Types](https://wordpress.org/support/article/post-types/#custom-post-types) ... READ MORE ...
+   2. Nothing else is needed on this file for now.
+   3. Click Activate on our new theme in the [CMS Tab](https://caseytrees-v4.local/wp-admin/themes.php).
+   4. Currently, `Pages > Home` is set to the front page. 
+   5. Create a new page "Front Page"
+   6. Notice that in the CMS Sidebar, we have Pages, Posts, Media, but no Resources or Trees. These are [Custom Post Types](https://wordpress.org/support/article/post-types/#custom-post-types) ... READ MORE ...
 
-### 3.3 Create `front-page.php` in the theme directory (`/themes/ct_theme21`)
+### 2.3 Create `front-page.php` in the theme directory (`/themes/ct_theme21`)
 1. At `Settings > Reading` set `Your homepage displays` to the radio button for Static Page, and select the new page we created "Front Page" and Save Changes
 2. The home page is now rendered by `front-page.php`.
 
-### 3.4 The Header
+### 2.4 The Header
 1. In `front-page.php` put `<?php get_header(); ?>` to call on `header.php`. 
 2. At [`Appearance > Themes`](https://caseytrees-v4.local/wp-admin/themes.php), select Customize and upload a new favicon if desired. 
    1. There is no option to upload a logo for the site, but we will add it now. 
@@ -117,7 +97,7 @@ add_action('after_setup_theme', 'ct2021_theme_setup');
 *** in the above code, the string given to 'theme_location without registration in functions.php seems to give us a menu of all our current pages and parent child relationships? 
 'theme_location` is the only required argument needed see [wp_nav_menu() Function](https://developer.wordpress.org/reference/functions/wp_nav_menu/)
 
-### 3.5 Blog Posts Archive Page 
+### 2.5 Blog Posts Archive Page 
 1. Create a new Page in the CMS called 'Blog Posts' or 'The Leaflet'
 2. Under `Settings > Reading` set `Posts Page:` to the Page we created.
 3. Create <b>`home.php`</b> in the template directory to render the the Blog Posts Index page with the following:
@@ -147,7 +127,7 @@ add_action('after_setup_theme', 'ct2021_theme_setup');
 <?php the_posts_pagination(); ?>
 
 ```
-### 3.6 Menu
+### 2.6 Menu
 1. Navigate to `Appearance > Menus`, create a new menu, and to it add The Front Page and the Posts Page. Save Menu. 
 1. Add the following to `functions.php` to register a menu to a location. We will add more to `$locations` eventually. 
 ```
@@ -168,7 +148,7 @@ add_action('init', 'ct2021_menus');
 ```
 #### Check out the browser and what it renders on [Front-page.php](http://caseytrees-v4.local/).
 
-### 3.7 Single Blog Post Page
+### 2.7 Single Blog Post Page
 1. Create <b>`single.php`</b> with 
 ```
 <?php get_header(); ?>
@@ -207,7 +187,7 @@ add_action('init', 'ct2021_menus');
     }
 ?>
 ```
-### 3.8 Adding the "Resources" Custom Post Type
+### 2.8 Adding the "Resources" Custom Post Type
 1. As of now, trees and resources are not visible in the CMS, although they are in our database. 
 2. Add this to `functions.php`. 
 ```
@@ -322,7 +302,7 @@ register_taxonomy(
 12. Save Changes
 13. Refresh the 404 page or visit the All Resources Archive from the home page. 
 
-### 3.9 Adding the "Trees" Custom Post Type
+### 2.9 Adding the "Trees" Custom Post Type
 1. in the CMS sidebar, there are no trees. 
 1. Add the following to `functions.php`
 ```
@@ -410,7 +390,7 @@ function trees_init() {
 <?php the_posts_pagination(); ?>
 
 ```
-### 3.10 But what about the other Pages?!
+### 2.10 But what about the other Pages?!
 1. Make `front-page.php` look like this: 
 
 ```
@@ -484,8 +464,8 @@ Here's the rest of the Boilerplate
    7. `single.php`
    8. `taxonomy.php`
 6. Right click on a page, and select "View Page Source" to confirm things are being rendered in the browser. 
-### 4.2 Styling the Header
-#### 4.2.1 The Logo
+### 2.2 Styling the Header
+#### 2.2.1 The Logo
 1. Add the following to `:root` in `style.css`
 ```
 /*
@@ -578,7 +558,7 @@ function ct2021_replace_logo_classes( $html ) {
 	return $html;
 }
 ```
-#### 4.2.2 The Nav Menu
+#### 2.2.2 The Nav Menu
 1. Currently, in `header.php` the call to `wp_nav_menu()` around <u>line 15</u>, with its array argument returns:
 ```
       <div class="menu-main-navigation-container">
