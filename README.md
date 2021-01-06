@@ -751,3 +751,6 @@ header li p {
     }
 }
 ```
+## Checkpoint 1
+Congratulations! We've dug deep into Worpdress, and are making amazing progress!
+The code up to this point is available on this Github Branch [checkpoint-1](https://github.com/caseytreesdc/caseytrees-v4/tree/checkpoint-1)! Use it to check/compare/copy/etc.
