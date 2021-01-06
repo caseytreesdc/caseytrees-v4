@@ -43,7 +43,7 @@
 ```
 /*
 Theme Name: Casey Trees 2021
-Author: Casey Trees Digital Developer
+Author: Casey Trees Communications and Development
 Author URI: https://caseytrees.org
 Description: Casey Trees 2021 theme
 Requires at least: 5.3
