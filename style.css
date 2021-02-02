@@ -37,17 +37,17 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
     --zeitung: zeitung-mono, cronos-pro, lato, sans-serif;
 }
 
-html, body {
+html,
+body {
     margin: 0;
 }
 
 .header__container {
     /* the 1% margin prevents the  header nav skew from exceeding the window width */
-    margin: 1% 1%;
+    padding: 1% 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--paper);
 }
 
 .header__logo-anchor {
@@ -56,7 +56,7 @@ html, body {
 
 .header__logo-anchor:hover,
 .header__logo-anchor:focus {
-    background: var(--moss);
+    background: var(--paper);
 }
 
 .header__logo {
@@ -117,6 +117,19 @@ main section p {
     margin: 0;
 }
 
+main a {
+    text-decoration: none;
+    color: var(--coffee);
+    text-decoration: underline;
+}
+
+main a:hover,
+main a:focus {
+    color: var(--moss);
+    background: none;
+    
+}
+
 .bold-text {
     font-weight: bold;
 }
@@ -146,7 +159,8 @@ main section p {
 
 .main__page-1-section-2 {
     height: 20vh;
-    background: var(--moss);
+    background: linear-gradient(rgba(123, 158, 129, 0), rgba(123, 158, 129, 1));
+    ;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -193,8 +207,12 @@ main section p {
     background: var(--silver);
 }
 
+.moss-highlight {
+    background: var(--moss);
+}
+
 .main__page-2 {
-    background: var(--yellow);
+    background: var(--paper);
 }
 
 .main__page-3 {
@@ -209,6 +227,10 @@ main section p {
 .main__page-3-section-1-h2,
 .main__page-4-section-1-h2 {
     padding: 50px 50px 25px 50px;
+}
+
+.main__page-2-section-1-h2 {
+    color: var(--moss);
 }
 
 .main__page-2-section-2,
@@ -241,6 +263,141 @@ main section p {
     align-self: center;
 }
 
+
+.screen-reader-text {
+    /* pagination heading from function */
+    display: none;
+}
+
+.Breadcrumbs {
+    background: var(--coffee);
+}
+
+.Breadcrumbs__anchor {
+    text-decoration: none;
+}
+
+.Breadcrumbs__text {
+    text-transform: lowercase;
+    font-family: var(--zeitung);
+    color: var(--paper);
+    padding: 8px 24px;
+}
+
+.Archive__home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Archive__posts-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.Archive__post-title {
+    color: var(--cobalt);
+    font-size: 26px;
+    font-family: var(--lato);
+}
+
+.Archive__post-title:hover,
+.Archive__post-title:focus {
+    color: var(--paarl);
+    text-decoration-style: double;
+    text-decoration-color: var(--forest);
+}
+
+.Archive__author-date {
+    font-family: var(--zeitung);
+}
+
+.Archive__img {
+    width: 600px;
+    height: auto;
+}
+
+.Archive__meta {
+    font-family: var(--lato);
+}
+
+.pagination {
+    max-width: 600px;
+    font-family: var(--zeitung);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px auto;
+}
+
+.page-numbers {
+    color: var(--cobalt);
+    text-decoration: none;
+}
+
+.page-numbers:hover,
+.page-numbers:focus {
+    color: var(--paarl);
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: var(--forest);
+}
+
+.Archive__post {
+    max-width: 600px;
+}
+
+.footer__container {
+    background: var(--silver);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__logo {
+    height: 130px;
+    opacity: 1;
+}
+
+.footer__logo:hover {
+    opacity: 0.4;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--cobalt);
+    font-family: var(--lato);
+    font-size: 17px;
+    margin: 3px;
+}
+
+.footer-link:hover {
+    color: var(--coffee);
+}
+
+.footer__button {
+    font-family: var(--zeitung);
+    text-decoration: none;
+    color: var(--silver);
+    text-align: center;
+    padding: 20px 40px;
+    background: var(--cobalt);
+}
+
+.footer__button:hover {
+    background: rgba(65, 104, 172, 0.6);
+}
+
 @media (max-width: 576px) {
     .header__container {
         display: flex;
@@ -250,8 +407,8 @@ main section p {
     .header-logo {
         width: 340px;
         margin: 10px;
-    }
 
+    }
 
     .main__page-1 {
         height: 200%;
@@ -271,6 +428,13 @@ main section p {
         height: 500px;
     }
 
+    .Archive__home {
+        margin: 0;
+    }
+
+    .Archive__img {
+        max-width: 99vw;
+    }
 }
 
 /* //  landscape phones, less than 768px) */

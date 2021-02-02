@@ -1,28 +1,34 @@
 <?php get_header(); ?> 
-<?php the_posts_pagination(); ?>
-<?php 
-    if( have_posts() ) {
-        while( have_posts() ) {
-            the_post();
-            ?><h2>
-                <a href="<?php the_permalink();?>"><?php the_title();?></a>
-            </h2>
-            <p><?php echo get_the_date(); ?> by <?php echo get_field('author');?> </p>       
-            <?php 
-                $image = get_field('image');
-                $size = 'medium'; // (thumbnail, medium, large, full or custom size)
-                if( $image ) {
-                    echo wp_get_attachment_image( $image, $size );
+<div class="Breadcrumbs">
+  <a class="Breadcrumbs__anchor" href="https://www.google.com/"
+    ><p class="Breadcrumbs__text"><?php ct2021_get_breadcrumbs(); ?></p></a
+  >
+</div>
+<div class="Archive__home">
+    <div class="Archive__posts-list">
+        <?php 
+            if( have_posts() ) {
+                while( have_posts() ) {
+                    the_post();?>
+                    <div class="Archive__post">
+                        <h3>
+                            <a class="Archive__post-title" href="<?php the_permalink();?>"><?php the_title();?></a>
+                        </h3>
+                        <p class="Archive__author-date"><?php echo get_the_date(); ?></p>
+                        <p class="Archive__meta">Categories: <?php  echo get_the_term_list($resource_id, 'resources-categories');?></p>
+                        <p class="Archive__meta">Tags: <?php echo get_the_term_list($resource_id, 'resources-tags', '', ' ');?>
+                        <div class="Archive__meta"><?php the_excerpt(); ?></div>
+                        <hr>
+                    </div>
+                    <?php
                 }
-            ?>
-            <?php $resource_id = get_the_ID();?>
-            <p>Categories: <?php  echo get_the_term_list($resource_id, 'resources-categories');?></p>
-            <p>Tags: <?php echo get_the_term_list($resource_id, 'resources-tags', '', ' ');?>
-            <?php the_excerpt(); ?>
-
-            <?php
-        }
-    }
-?>
-<?php the_posts_pagination(); ?>
+            }
+        ?>
+        <?php the_posts_pagination( array(
+            'mid_size'  => 2,
+            'prev_text' => __( 'NEWER POSTS', 'textdomain' ),
+            'next_text' => __( 'OLDER POSTS', 'textdomain' ),
+        ) ); ?>
+    </div>
+</div>
 <?php get_footer(); ?>

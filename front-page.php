@@ -2,18 +2,17 @@
     <!-- begin main MODULE -->
     <main>
     <!-- being main page-1 MODULE -->
-    <div class="main__page-1">
-        <!-- begin main masthead section MODULE-->
-        <section
-        class="main__page-1-section-1"
-        style="
+    <div style="
             background: linear-gradient(
                 rgba(123, 158, 129, 0.3),
                 rgba(123, 158, 129, 0.3)
             ),
             url(<? echo get_field('home_page_main_photo');?>);
         "
-        >
+        class="main__page-1">
+        <!-- begin main masthead section MODULE-->
+        <section
+        class="main__page-1-section-1">
         <h2 class="main__page-1-section-1-h2">
             Empowering communities <br />
             in DC through trees
@@ -58,7 +57,7 @@
             WITH OUR DISTRICT PARTNERS AND THOUSANDS OF LOCAL VOLUNTEERS,
         </p>
         <p class="main__page-2-section-2-p">
-            WE <span class="grey-highlight">PLANT 3,000+ TREES</span> EVERY YEAR TO
+            WE <a class="plant-link grey-highlight" href="">PLANT 3,000+ TREES</a> EVERY YEAR TO
             REACH OUR
         </p>
         <p class="main__page-2-section-2-p">

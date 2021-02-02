@@ -1,9 +1,14 @@
 <?php get_header(); ?>
-
+<div class="Breadcrumbs">
+  <a class="Breadcrumbs__anchor" href="https://www.google.com/"
+    ><p class="Breadcrumbs__text"><?php ct2021_get_breadcrumbs(); ?></p></a
+  >
+</div>
 <?php 
     if( have_posts() ) {
         while( have_posts() ) {
             the_post();
+            printf( __( 'The post type is: %s', 'textdomain' ), get_post_type( get_the_ID() ) );
             ?><h2>
                 <a href="<?php the_permalink();?>"><?php the_title();?></a>
             </h2>

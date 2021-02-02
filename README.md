@@ -30,15 +30,27 @@
 7. Under `Settings > Reading` set `Posts Page:` to that page and Save Changes.
 8. Back in `Appearance > Menus`, add that page to the menu. 
 9.  In `Appearance > Themes > Customize > Site Identity` add a logo. 
+10. Adding photos to the home page
+    1.  1. In the sidebar, go to `Custom Fields > Add New`.
+    2. Call it something like 'Home Page Photos'
+    3.  Click `+ Add Field` make Field Label to 'Home Page MAIN Photo', it will make the Field Name `home_page_main_photo`.
+    4.  Set the Field Type to Image, and the Return Format to 'Image URL'
+    5.  Make 3 more, so that we end up having 4 Fields in this Field Group. The Field Labels and corresponding Field Name should be:
+      1. Home Page MAIN Photo, `home_page_main_photo`
+      2. Home Page RESTORE Photo, `home_page_restore_photo`
+      3. Home Page ENHANCE Photo, `home_page_enhance_photo`
+      4. Home Page PROTECT Photo, `home_page_protect_photo`
+    6.  Under `Location > Rules` set <b>Show this field group</b> to  `Page Type` `is equal to` `Front Page`.
+    7.  Go to the Page that is set to be the Front Page in Pages and add/upload the photos from the media library.
 
 ## 2. A New Theme
 
 ### 2.1 Navigate to [`Appearance > Themes`](https://caseytrees_2021.local/wp-admin/themes.php) in the CMS
-1. Currently the theme is called [Casey Trees, by NMC](https://caseytrees_2021.local/wp-admin/themes.php?theme=nmc_caseytrees)
+1. The current theme is [Casey Trees, by NMC](https://caseytrees_2021.local/wp-admin/themes.php?theme=nmc_caseytrees)
    1. The home page is rendered (kinda) through `wp-content/themes/nmc_caseytrees/templates/_layouts/base.twig`... READ MORE ... 
-1. create a folder called something like 'ct_theme21' in `/Local Sites/caseytrees-_2021/app/public/wp-content/themes`
-2. create 'style.css' in `/Local Sites/caseytrees_2021/app/public/wp-content/themes/ct_theme21`. This the template directory. 
-3. Setting up the <b>Template Header</b>
+2. create a folder called something like 'ct_theme21' in `/Local Sites/caseytrees-_2021/app/public/wp-content/themes`
+3. create 'style.css' in `/Local Sites/caseytrees_2021/app/public/wp-content/themes/ct_theme21`. This the template directory. 
+4. Setting up the <b>Template Header</b>
    1. style.css requires a header, like: (there are more or less options of what can go in there.)
 ```
 /*
@@ -1017,4 +1029,10 @@ main section p {
     <!-- end main page-4 MODULE-->
 
 <?php get_footer(); ?>
+```
+## 5.0 Building the Posts Archive Page
+
+1. Make home.php look like
+```
+
 ```
