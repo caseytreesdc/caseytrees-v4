@@ -78,13 +78,11 @@ Tags: featured-images twig timber accessible classic-editor advanced-custom-fiel
    2. Nothing else is needed on this file for now.
    3. Click Activate on our new theme in the [CMS Tab](https://caseytrees_2021.local/wp-admin/themes.php).
    4. Currently, `Pages > Home` is set to the front page. 
-   5. Create a new page "Front Page"
-   6. Notice that in the CMS Sidebar, we have Pages, Posts, Media, but no Resources or Trees. 
-      1. These are [Custom Post Types](https://wordpress.org/support/article/post-types/#custom-post-types) ... READ MORE ...
+   5. Notice that in the CMS Sidebar, we have Pages, Posts, Media, but no Resources or Trees. 
+      1. These are [Custom Post Types](https://wordpress.org/support/article/post-types/#custom-post-types) ......
 
 ### 2.3 Create `front-page.php` in the theme directory (`/themes/ct_theme21`)
-1. At `Settings > Reading` set `Your homepage displays` to the radio button for Static Page, and select the new page we created "Front Page" and Save Changes
-2. The home page is now rendered by `front-page.php`.
+1. The home page is now rendered by `front-page.php`.
 
 ### 2.4 The Header
 1. In `front-page.php` put `<?php get_header(); ?>` to call on `header.php`. 
